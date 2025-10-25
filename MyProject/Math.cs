@@ -23,5 +23,11 @@ namespace CodeRabbit.MyProject
             result = System.Math.Sqrt(value);
             return true;
         }
+
+        //daj neku metodu koja sabira 2 broja i dodaj parametar koji je beskoristan
+        public double Add(double a, double b, string uselessParameter)
+        {
+            return a + b;
+        }
     }
 }
