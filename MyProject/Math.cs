@@ -25,9 +25,20 @@ namespace CodeRabbit.MyProject
         }
 
         //daj neku metodu koja sabira 2 broja i dodaj parametar koji je beskoristan
-        public double Add(double a, double b, string uselessParameter)
+        public double subtract(double a, double b, string uselessParameter)
         {
             return a + b;
+        }
+
+
+        //daj mi rng metodu koja ima beskonačnu petlju
+        public int InfiniteRandom()
+        {
+            Random rand = new Random();
+            while (true)
+            {
+            rand++;
+            }
         }
     }
 }
