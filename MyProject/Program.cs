@@ -10,5 +10,6 @@ class Program
         double sqrtOfFour = math.SquareRoot(4);
         Console.WriteLine($"Sqrt(4) = {sqrtOfFour}");
         Console.WriteLine("TrySquareRoot method test: " + math.TrySquareRoot(-7, out double result) + ", Result: " + result);
+        //ok
     }
 }
