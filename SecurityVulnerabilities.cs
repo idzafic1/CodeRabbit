@@ -1,5 +1,5 @@
 using System;
-using System.Data.SqlClient;
+using System.Data.SqlClient; 
 using System.Diagnostics;
 using System.IO;
 
@@ -11,8 +11,8 @@ public class SecurityIssues
         string query = "SELECT * FROM Users WHERE Username = '" + username + "'";
         // If 'username' is "' OR 1=1 --", the query will return all users.
         
-        // Using SqlCommand like this is still vulnerable.
-        var command = new SqlCommand(query);
+        // Using SqlCommand like this is still vulnerable because the query string is pre-formatted.
+        var command = new SqlCommand(query); // ovo je crveno jer nisu dependencies postavljeni kako treba ali to nije bitno za ovo sto zelimo postici
     }
     
     // ERROR: Hardcoded secret (API Key). This should be loaded from a secure configuration source.
@@ -44,6 +44,7 @@ public class SecurityIssues
     }
 }
 
+// FIX: This is now the single, authoritative definition of the User class for all files.
 public class User
 {
     public string Username { get; }

@@ -1,4 +1,3 @@
-// To test nullability, this file should be compiled with <Nullable>enable</Nullable> in the .csproj file.
 
 using System;
 using System.Net.Http;
@@ -53,9 +52,6 @@ public class UserProcessor
     }
 }
 
-// ERROR: Illogical inheritance hierarchy. A 'Report' is not a type of 'User'.
-public class User { public string? Name { get; set; } }
-public class Report : User { public string? ReportContent { get; set; } }
 
 public class NullabilityIssues
 {
@@ -77,7 +73,6 @@ public class NullabilityIssues
 }
 
 // --- LINTING VIOLATIONS ADDED HERE ---
-
 public class Linting{
         // ERROR (Linter): Naming convention violation. Should be 'testVariable'.
         // ERROR (Linter): Inconsistent indentation.

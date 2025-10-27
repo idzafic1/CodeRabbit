@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 
 // This using statement creates a potential for name shadowing.
+// A linter should flag this as confusing.
 using File = System.IO.File;
 
 namespace MyProject
@@ -17,9 +18,9 @@ namespace MyProject
     {
         public void ProcessFile()
         {
-            // A developer might be confused about whether this is our 'File' or 'System.IO.File'.
-            // The 'using' alias at the top makes this resolve to System.IO.File, but it's ambiguous.
-            var content = File.ReadAllText("data.txt");
+            // FIX: The compiler error is resolved by using the full, unambiguous name for the method.
+            // The "name shadowing" issue is still present for a tool to detect, but the code is now valid.
+            var content = System.IO.File.ReadAllText("data.txt");
         }
 
         // ERROR: Time zone issue. Using 'DateTime.Now' records the server's local time.
