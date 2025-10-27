@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/spiki/Desktop/cR/CodeRabbit/MyProject/MyProject.csproj": {}
+    "/home/spiki/Desktop/Presentation/MyProject.csproj": {}
   },
   "projects": {
-    "/home/spiki/Desktop/cR/CodeRabbit/MyProject/MyProject.csproj": {
+    "/home/spiki/Desktop/Presentation/MyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/spiki/Desktop/cR/CodeRabbit/MyProject/MyProject.csproj",
+        "projectUniqueName": "/home/spiki/Desktop/Presentation/MyProject.csproj",
         "projectName": "MyProject",
-        "projectPath": "/home/spiki/Desktop/cR/CodeRabbit/MyProject/MyProject.csproj",
+        "projectPath": "/home/spiki/Desktop/Presentation/MyProject.csproj",
         "packagesPath": "/home/spiki/.nuget/packages/",
-        "outputPath": "/home/spiki/Desktop/cR/CodeRabbit/MyProject/obj/",
+        "outputPath": "/home/spiki/Desktop/Presentation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/spiki/.nuget/NuGet/NuGet.Config"
