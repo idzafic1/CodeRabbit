@@ -1,0 +1,33 @@
+# GREŠKA: Nepotpun CI/CD cjevovod. Ovaj tijek rada gradi kod, ali ne pokreće nikakve testove.
+# Zahtjev za povlačenjem mogao bi se spojiti s testovima koji nisu uspjeli jer nedostaje korak testiranja.
+name: .NET Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore
+      
+# NEDOSTAJUĆI KORAK: Ovdje bi trebao postojati korak `dotnet test`.
+# - naziv: Test
+# pokretanje: dotnet test --no-build --verbosity normal
+
+#za slanje
